@@ -46,10 +46,13 @@ function duffy_portfolio_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
+	add_image_size('landscape-blog', 400, 300, true);
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'duffy-portfolio' ),
+			'footer' => esc_html__( 'Footer', 'portfolio' ),
 		)
 	);
 
@@ -67,6 +70,7 @@ function duffy_portfolio_setup() {
 			'caption',
 			'style',
 			'script',
+			'navigation-widgets',
 		)
 	);
 
@@ -99,6 +103,9 @@ function duffy_portfolio_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'responsive-embeds' );
 }
 add_action( 'after_setup_theme', 'duffy_portfolio_setup' );
 
@@ -175,4 +182,6 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+require get_template_directory() . '/inc/cpt-taxonomy.php';
 
