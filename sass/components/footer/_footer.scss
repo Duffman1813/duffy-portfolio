@@ -1,0 +1,66 @@
+.footer-menu {
+    margin: 15px;
+}
+
+#menu-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.menu-footer-container a {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-footer-container a:hover {
+    background-color: blue;
+}
+
+.menu-footer-container ul {
+    list-style: none;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 50em) {
+    .footer-menu {
+        display: none;
+    }
+}
+
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 1001;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 100px;
+}
+
+.sticky {
+    display: block;
+}
+
+.post,
+.page {
+    margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+    display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 1.5em 0 0;
+}
+
+.page-links {
+    clear: both;
+    margin: 0 0 1.5em;
+}

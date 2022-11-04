@@ -1,0 +1,151 @@
+.home h2 {
+    font-family: Roboto Slab, serif;
+    font-weight: 300;
+    text-align: center;
+    color: yellow;
+    text-shadow: 2px 2px 2px black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    transform: translateX(100px);
+    animation: 1.2s slideIn ease-in-out forwards 1s;
+    z-index: 10;
+    opacity: 0;
+    margin-left: 10px;
+}
+
+.projects {
+    display: grid;
+    gap: 1.4rem;
+    padding: 20px 15px;
+    grid-template-columns: repeat(5, auto);
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: pointer;
+}
+
+.home-projects {
+    background-color: #eee;
+    width: 180px;
+    height: 200px;
+    margin: 0 10px;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.home-projects img {
+    padding: 10px;
+}
+
+.projects article a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.container {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    background-image: url(./images/lightning-background.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    /* background-color: rgba(248, 54, 54, 0.5); */
+    padding: 10px;
+    font-family: Roboto Slab, serif;
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px black;
+    color: yellow;
+    transform: translateY(-150px);
+    animation: 1.2s slideIn ease-in-out forwards 1s;
+    z-index: 10;
+    opacity: 0;
+    position: absolute;
+}
+
+.container p {
+    font-family: Roboto Slab, serif;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    transform: translateY(150px);
+    animation: 1.2s slideIn ease-in-out forwards 1s;
+    z-index: 11;
+    opacity: 0;
+    bottom: 5rem;
+    position: absolute;
+}
+
+
+@keyframes skewBg {
+    0% {
+        transform: scale(.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes underline {
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes slideIn {
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.text-container {
+    display: flex;
+}
+
+.text-container .text-box {
+    margin: 10px;
+    padding: 10px;
+}
+
+.text-container .text-box h3 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.text-box ul {
+    margin: 0;
+    padding: 0;
+}
+
+.text-box li {
+    list-style: none;
+    text-align: center;
+}
+
+.text-box img {
+    width: 50px;
+    height: 50px;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}

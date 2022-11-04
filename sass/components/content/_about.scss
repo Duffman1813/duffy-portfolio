@@ -1,0 +1,47 @@
+.page-id-7 .entry-header {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    background-image: url(./images/computer-image.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about-container {
+    background-color: #eee;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 2px 2px #aaa;
+}
+
+.about-title {
+    font-size: 2rem;
+}
+
+.about-title,
+.skills-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Roboto Slab, serif;
+}
+
+.about-bio {
+    padding: 20px;
+}
+
+.skills-gallery li {
+    list-style: none;
+}
+
+
+@media screen and (min-width: 700px) {
+    .skills-gallery {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+    }
+}

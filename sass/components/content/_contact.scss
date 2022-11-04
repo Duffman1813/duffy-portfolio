@@ -1,0 +1,41 @@
+.page-id-14 h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+    transform: translateY(-150px);
+    animation: 1.2s slideIn ease-in-out forwards 1s;
+    z-index: 10;
+    opacity: 0;
+    position: relative;
+}
+
+.page-id-14 h1::before {
+    display: none;
+    /* content: '';
+	width: 0%;
+	height: 0.3rem;
+	background-color: yellow;
+	position: absolute;
+	bottom: -10px;
+	animation: 1s underline ease-in-out forwards 2s;
+	mix-blend-mode: screen; */
+}
+
+#wpforms-form-58 {
+    border: 1px solid lightgray;
+    border-radius: 16px;
+    box-shadow: 1px 1px #aaa;
+    padding: 20px;
+    margin: 20px;
+    background-color: #eee;
+}
+
+#wpforms-form-58 button {
+    background-color: lightcyan;
+    border-radius: 16px;
+}
+
+#wpforms-form-58 input {
+    background-color: lightcyan;
+    border-radius: 16px;
+}
