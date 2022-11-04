@@ -5,6 +5,9 @@
 /* Posts and pages
 --------------------------------------------- */
 @import "content/posts-and-pages";
+@import "content/front-page";
+@import "content/about";
+@import "content/contact";
 
 /* Comments
 --------------------------------------------- */
@@ -25,3 +28,11 @@
 /* Galleries
 --------------------------------------------- */
 @import "media/galleries";
+
+/* Header
+--------------------------------------------- */
+@import "header/header";
+
+/* Footer
+--------------------------------------------- */
+@import "footer/footer";
