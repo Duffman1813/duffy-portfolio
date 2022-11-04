@@ -21,7 +21,7 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php portfolio_post_thumbnail(); ?>
+	<?php duffy_portfolio_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -33,7 +33,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'portfolio' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'duffy-portfolio' ),
 				'after'  => '</div>',
 			)
 		);
@@ -41,6 +41,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php portfolio_entry_footer(); ?>
+		<?php duffy_portfolio_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
