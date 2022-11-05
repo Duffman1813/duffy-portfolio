@@ -39,8 +39,5 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php duffy_portfolio_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	
 </article><!-- #post-<?php the_ID(); ?> -->

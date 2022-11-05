@@ -636,6 +636,8 @@ textarea {
 
 .site-main {
 	background-color: white;
+	height: 100vh;
+	margin-bottom: 6.5rem;
 }
 
 @media screen and (min-width: 50em) {
@@ -672,11 +674,14 @@ textarea {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	background-color: #111;
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
+	background-color: #fff;
+	color: #111;
 }
 
 .main-navigation li {
@@ -684,12 +689,16 @@ textarea {
 }
 
 .main-navigation li.current-menu-item > a,
-.main-navigation li.current_page_item > a,
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
+.main-navigation li.current_page_item > a {
 	text-decoration: underline;
 	-webkit-text-decoration-color: #fff200;
 	        text-decoration-color: #fff200;
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+	background-color: #fff;
+	color: #111;
 }
 
 .main-navigation li.current-menu-item svg path,
@@ -700,6 +709,7 @@ textarea {
 }
 
 .main-navigation a {
+	border-bottom: 1px solid #fff;
 	font-size: 1.2rem;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -710,6 +720,8 @@ textarea {
 
 .main-navigation.toggled ul {
 	display: block;
+	width: 60%;
+	margin-right: 0 auto;
 }
 
 .menu-toggle {
@@ -736,6 +748,9 @@ textarea {
 		top: 0;
 		align-self: center;
 		margin-left: auto;
+	}
+	.main-navigation a {
+		border: none;
 	}
 	.main-navigation ul,
 	.main-navigation.toggled ul {
@@ -1145,12 +1160,12 @@ h1 {
 /* Header
 --------------------------------------------- */
 .site-header {
-	background-color: rgba(59, 130, 246, 0.5);
+	background-color: #111;
 	color: #fff;
 }
 
 .site-header a {
-	color: #111;
+	color: #fff;
 }
 
 .site-branding {
@@ -1221,11 +1236,14 @@ h1 {
 }
 .site-footer {
 	display: grid;
-	grid-template-columns: 1fr minmax(auto, 25rem) minmax(auto, 37.5rem) 1fr;
+	grid-template-columns: 1fr minmax(auto, 1300px) 1fr;
 	justify-content: center;
+	position: fixed;
 	bottom: 0;
+	z-index: 1001;
 	background-color: black;
 	color: white;
+	height: 100px;
 }
 
 .sticky {
