@@ -153,6 +153,13 @@ function duffy_portfolio_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	if ( is_front_page() ){
+
+		wp_enqueue_script( 'scroll-scripts', get_template_directory_uri() .'/js/scroll.js', array() );
+
+	}
+
 }
 add_action( 'wp_enqueue_scripts', 'duffy_portfolio_scripts' );
 

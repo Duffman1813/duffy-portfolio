@@ -17,11 +17,27 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-  <div class='container'>
-   <h1>Shaun Duffy</h1>
-   <p>Front End Web Developer</p>
- 
-</div>
+  <div class="context">
+        <h1>Shaun Duffy</h1>
+        <p>Front End Web Developer</p>
+    </div>
+
+<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+
+    <div class="front-container">
 
 <?php	
 	$args = array(
@@ -32,7 +48,11 @@ get_header();
 $query = new WP_Query( $args );
  
 if ( $query -> have_posts() ) : ?>
-  <h2>Projects</h2>
+
+<div class="projects-title">
+   <h2>Projects</h2>
+</div>
+
     <section class="projects">
         <?php
         while ( $query -> have_posts() ) :
@@ -51,7 +71,7 @@ if ( $query -> have_posts() ) : ?>
     </section>
 <?php endif; ?>
 
-<section>
+<section class="about-front">
   <div class="reveal">
     <h2>About Me</h2>
     <div class="text-container">
@@ -96,6 +116,8 @@ if ( $query -> have_posts() ) : ?>
     </div>
   </div>
 </section>
+
+</div>
 
       </main><!-- #main -->
 

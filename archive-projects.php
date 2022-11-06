@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package portfolio
+ * @package Duffy_Portfolio
  */
 
 get_header();

@@ -129,14 +129,3 @@
 		left: auto;
 	}
 }
-
-/* If Admin Bar is on front end */
-.admin-bar .main-navigation {
-	top: calc(5rem + 46px);
-}
-
-@media screen and (min-width: 50em) {
-	.admin-bar .main-navigation {
-		top: 0;
-	}
-}

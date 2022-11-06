@@ -8,7 +8,7 @@
 @import "content/front-page";
 @import "content/about";
 @import "content/contact";
-
+@import "content/project";
 /* Comments
 --------------------------------------------- */
 @import "comments/comments";
@@ -36,3 +36,7 @@
 /* Footer
 --------------------------------------------- */
 @import "footer/footer";
+
+/* Scroll
+--------------------------------------------- */
+@import "scroll/scroll";

@@ -18,6 +18,8 @@ get_header();
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
+			echo '<section class="project-page">';
+
 			if ( get_field( 'overview_title' ) ) {
 				echo '<h3 class="overview-title">'. esc_html( get_field('overview_title') ) .'</h3>';
 			 }
@@ -54,6 +56,8 @@ get_header();
 			 if ( get_field( 'requirements_description' ) ) {
 				echo '<p class="requirements_description">'. esc_html( get_field('requirements_description') ) .'</p>';
 			 }
+
+			 echo '</section>';
 
 			the_post_navigation(
 				array(
