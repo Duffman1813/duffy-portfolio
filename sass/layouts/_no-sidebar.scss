@@ -1,32 +1,33 @@
-// .site {
-// 	max-width: 50rem;
-// 	margin: 0 auto;
-// }
-
 .site-main {
 	background-color: white;
-	max-width: 50rem;
-	margin: 0 auto;
 }
 
-@media screen and (min-width: 50em) {
-	.site {
-		grid-template-columns: 1fr minmax(auto, 1300px) 1fr;
-		grid-template-areas:
-			"header header header"
-			". main main ."
-			"footer footer footer ";
-	}
+@media screen and (min-width: 800px) {
 
 	.site-header {
-		grid-area: header;
+		display: grid;
+		grid-template-columns: 1fr minmax(0, 650px) minmax(0, 650px) 1fr;
 	}
 
 	.site-main {
-		grid-area: main;
+		display: grid;
+		grid-template-columns: 1fr minmax(0, 650px) minmax(0, 650px) 1fr;
 	}
 
 	.site-footer {
-		grid-area: footer;
+		display: grid;
+		grid-template-columns: 1fr minmax(0, 650px) minmax(0, 650px) 1fr;
 	}
+
+	// .site-header {
+	// 	grid-area: header;
+	// }
+
+	// .site-main {
+	// 	grid-area: main;
+	// }
+
+	// .site-footer {
+	// 	grid-area: footer;
+	// }
 }

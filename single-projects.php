@@ -12,6 +12,8 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+<div class="project-wrapper">
+
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -34,40 +36,38 @@ get_header();
 
 			 
 			 if ( get_field( 'role_description' ) ) {
-				echo '<p class="
-				role_description">'. esc_html( get_field('
-				role_description') ) .'</p>';
+				echo '<p class="role-description">'. esc_html( get_field('role_description') ) .'</p>';
 			 }
 
 			 if ( get_field( 'languages' ) ) {
-				echo '<h3 class="
-				languages">'. esc_html( get_field('
-				languages') ) .'</h3>';
+				echo '<h3>'. esc_html( get_field('languages') ) .'</h3>';
 			 }
 
 			 if ( get_field( 'languages_list' ) ) {
-				echo '<p class="languages_list">'. esc_html( get_field('languages_list') ) .'</p>';
+				echo '<p class="languages-list">'. esc_html( get_field('languages_list') ) .'</p>';
 			 }
 
 			 if ( get_field( 'requirements_title' ) ) {
-				echo '<h3 class="requirements_title">'. esc_html( get_field('requirements_title') ) .'</h3>';
+				echo '<h3 class="requirements-title">'. esc_html( get_field('requirements_title') ) .'</h3>';
 			 }
 
 			 if ( get_field( 'requirements_description' ) ) {
-				echo '<p class="requirements_description">'. esc_html( get_field('requirements_description') ) .'</p>';
+				echo '<p class="requirements-description">'. esc_html( get_field('requirements_description') ) .'</p>';
 			 }
 
-			 echo '</section>';
-
-			the_post_navigation(
+			 the_post_navigation(
 				array(
 					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'duffy-portfolio' ) . '</span> <span class="nav-title">%title</span>',
 					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'duffy-portfolio' ) . '</span> <span class="nav-title">%title</span>',
 				)
 			);
 
+			 echo '</section>';
+			 
 		endwhile; 
 		?>
+
+</div>
 
 	</main>
 

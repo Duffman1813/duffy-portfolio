@@ -19,7 +19,7 @@ get_header();
 
   <div class="context">
         <h1>Shaun Duffy</h1>
-        <p>Front End Web Developer</p>
+        <h3>Front End Web Developer</h3>
     </div>
 
 <div class="area" >
@@ -84,7 +84,7 @@ if ( $query -> have_posts() ) : ?>
   </div>
 </section>
 
-<section>
+<section class="skills">
   <div class="reveal">
     <h2>Technical Skills</h2>
     <div class="text-container">
@@ -100,7 +100,7 @@ if ( $query -> have_posts() ) : ?>
   </div>
 </section>
 
-<section>
+<section class="contact-info">
   <div class="reveal">
     <h2>Contact</h2>
     <div class="text-container">

@@ -1,5 +1,11 @@
 .footer-menu {
     margin: 15px;
+    grid-column: 1/5;
+}
+
+.creator {
+    text-align: center;
+    grid-column: 1/5;
 }
 
 #menu-footer {

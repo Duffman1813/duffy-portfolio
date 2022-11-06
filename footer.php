@@ -18,8 +18,11 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'footer' ));?>
 				</nav>
 		</div>
-
-		<p>Shaun Duffy</p>
+		
+<div class="creator">
+<p>Shaun Duffy</p>
+</div>
+	
 
 	</footer>
 

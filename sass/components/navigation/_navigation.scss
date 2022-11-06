@@ -59,19 +59,16 @@
 
 .main-navigation.toggled ul {
 	display: block;
-	width: 60%;
-	margin-right: 0 auto;
+	margin-top: 2.2rem;
 }
 
 .menu-toggle {
 	position: absolute;
-	top: -4.5rem;
+	top: -2.5rem;
 	right: .5rem;
 	z-index: 1100;
 	display: block;
-	width: 3.75rem;
 	padding: 1rem;
-	margin: 0;
 	border: none;
 	background: transparent;
 	color: #fff;
@@ -87,7 +84,7 @@
 		position: relative;
 		top: 0;
 		align-self: center;
-		margin-left: auto;
+		grid-column: 3/4;
 	}
 
 	.main-navigation a {

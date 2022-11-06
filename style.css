@@ -420,9 +420,7 @@ h3 {
 }
 
 .entry-header h1 {
-	left: 0;
-	right: 0;
-	text-align: center;
+	font-size: 2rem;
 }
 
 p {
@@ -634,23 +632,20 @@ textarea {
 --------------------------------------------------------------*/
 .site-main {
 	background-color: white;
-	max-width: 50rem;
-	margin: 0 auto;
 }
 
-@media screen and (min-width: 50em) {
-	.site {
-		grid-template-columns: 1fr minmax(auto, 1300px) 1fr;
-		grid-template-areas: "header header header" ". main main ." "footer footer footer ";
-	}
+@media screen and (min-width: 800px) {
 	.site-header {
-		grid-area: header;
+		display: grid;
+		grid-template-columns: 1fr minmax(0, 650px) minmax(0, 650px) 1fr;
 	}
 	.site-main {
-		grid-area: main;
+		display: grid;
+		grid-template-columns: 1fr minmax(0, 650px) minmax(0, 650px) 1fr;
 	}
 	.site-footer {
-		grid-area: footer;
+		display: grid;
+		grid-template-columns: 1fr minmax(0, 650px) minmax(0, 650px) 1fr;
 	}
 }
 /*--------------------------------------------------------------
@@ -718,19 +713,16 @@ textarea {
 
 .main-navigation.toggled ul {
 	display: block;
-	width: 60%;
-	margin-right: 0 auto;
+	margin-top: 2.2rem;
 }
 
 .menu-toggle {
 	position: absolute;
-	top: -4.5rem;
+	top: -2.5rem;
 	right: 0.5rem;
 	z-index: 1100;
 	display: block;
-	width: 3.75rem;
 	padding: 1rem;
-	margin: 0;
 	border: none;
 	background: transparent;
 	color: #fff;
@@ -745,7 +737,7 @@ textarea {
 		position: relative;
 		top: 0;
 		align-self: center;
-		margin-left: auto;
+		grid-column: 3/4;
 	}
 	.main-navigation a {
 		border: none;
@@ -810,13 +802,14 @@ textarea {
 .front-container {
 	padding: 0 30px;
 	max-width: 100%;
+	grid-column: 2/3;
 }
 
 .home h2 {
 	font-weight: 300;
 	text-align: center;
 	color: #111;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	text-transform: uppercase;
 	transform: translateX(100px);
 	animation: 1.2s slideIn ease-in-out forwards 1s;
@@ -826,15 +819,16 @@ textarea {
 
 .projects {
 	display: flex;
-	gap: 0;
 	flex-wrap: wrap;
+	gap: 0;
+	justify-content: space-around;
 }
 
 .home-projects {
 	padding: 30px;
 	margin-bottom: 20px;
 	border-radius: 5px;
-	box-shadow: 0 20px 50px 0 rgba(28, 9, 80, 0.07);
+	box-shadow: 0 0 50px 0 rgba(28, 9, 80, 0.5);
 }
 
 .projects article a {
@@ -844,26 +838,41 @@ textarea {
 	text-transform: uppercase;
 }
 
+.projects article img {
+	border-radius: 5px;
+}
+
 .context {
 	height: 50vh;
 	width: 100%;
-	position: relative;
-	background-clip: url(./media/blue.mp4);
-	background-size: cover;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: absolute;
 }
 
-.context p {
-	font-size: 2rem;
+.context h1 {
+	padding: 10px;
+	font-size: 3rem;
 	color: white;
-	text-shadow: 2px 2px 2px black;
+	transform: translateY(-150px);
+	animation: 1.2s slideIn ease-in-out forwards 1s;
+	z-index: 10;
+	opacity: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	position: absolute;
+	top: 25%;
+}
+
+.context h3 {
+	color: white;
 	transform: translateY(150px);
 	animation: 1.2s slideIn ease-in-out forwards 1s;
 	z-index: 11;
 	opacity: 0;
-	bottom: 4.5rem;
+	left: 0;
+	right: 0;
+	text-align: center;
+	top: 50%;
 	position: absolute;
 }
 
@@ -929,27 +938,11 @@ textarea {
 	opacity: 1;
 }
 
-.context {
-	width: 100%;
-	position: absolute;
-}
-
-.context h1 {
-	padding: 10px;
-	font-size: 3rem;
-	color: white;
-	transform: translateY(-150px);
-	animation: 1.2s slideIn ease-in-out forwards 1s;
-	z-index: 10;
-	opacity: 0;
-	position: absolute;
-}
-
 .area {
 	background: #4e54c8;
 	background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-	width: 100%;
 	height: 50vh;
+	grid-column: 1/4;
 }
 
 .circles {
@@ -957,7 +950,7 @@ textarea {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 63vh;
+	height: 66vh;
 	overflow: hidden;
 }
 
@@ -1063,13 +1056,39 @@ textarea {
 		border-radius: 50%;
 	}
 }
-@media screen and (min-width: 50em) {
-	.projects {
-		display: flex;
+@media screen and (min-width: 768px) {
+	.area {
+		grid-column: 1/5;
 	}
-	.home-projects {
-		width: 300px;
-		height: 300px;
+	.context {
+		grid-column: 1/5;
+	}
+	.front-container {
+		padding: 0;
+		grid-column: 2/4;
+	}
+	.projects {
+		grid-column: 1/4;
+	}
+	.context h1 {
+		font-size: 5rem;
+	}
+	.context h3 {
+		font-size: 2.5rem;
+		top: 60%;
+	}
+	.home h2 {
+		margin: 1.8rem 0;
+		grid-column: 1/4;
+	}
+	.about-front {
+		grid-column: 1/4;
+	}
+	.contact-info {
+		grid-column: 1/4;
+	}
+	.skills {
+		grid-column: 1/4;
 	}
 }
 .page-id-7 .entry-header {
@@ -1162,13 +1181,31 @@ textarea {
 
 .project-page {
 	padding: 0 30px;
-	max-width: 100%;
 }
 
-.project-page h3 {
-	font-weight: 500;
+.post-thumbnail {
+	position: relative;
+	z-index: 1;
 }
 
+.entry-header {
+	position: absolute;
+	z-index: 2;
+}
+
+.entry-header h1 {
+	color: white;
+}
+
+@media screen and (min-width: 800px) {
+	.project-wrapper {
+		display: flex;
+		grid-column: 1/5;
+	}
+	.entry-header h1 {
+		font-size: 3rem;
+	}
+}
 /* Comments
 --------------------------------------------- */
 .comment-content a {
@@ -1291,6 +1328,7 @@ textarea {
 .site-title {
 	font-size: 1.875rem;
 	margin: 0;
+	text-align: center;
 }
 
 .site-title a {
@@ -1302,23 +1340,24 @@ textarea {
 }
 
 @media screen and (min-width: 50em) {
-	.site-branding {
-		text-align: center;
-	}
 	.site-header {
 		display: grid;
-		grid-template-columns: 1fr minmax(auto, 25rem) minmax(auto, 37.5rem) 1fr;
-		justify-content: center;
+		grid-template-columns: 1fr minmax(0, 650px) minmax(0, 650px) 1fr;
 	}
 	.site-branding {
 		grid-column: 2/3;
-		text-align: left;
 	}
 }
 /* Footer
 --------------------------------------------- */
 .footer-menu {
 	margin: 15px;
+	grid-column: 1/5;
+}
+
+.creator {
+	text-align: center;
+	grid-column: 1/5;
 }
 
 #menu-footer {
