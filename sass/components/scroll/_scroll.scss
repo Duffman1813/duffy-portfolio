@@ -24,6 +24,7 @@ section h2 {
 
 section .text-container {
     display: flex;
+    justify-content: space-around;
 }
 
 section .text-container .text-box {

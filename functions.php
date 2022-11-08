@@ -52,7 +52,7 @@ function duffy_portfolio_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'duffy-portfolio' ),
-			'footer' => esc_html__( 'Footer', 'portfolio' ),
+			'footer' => esc_html__( 'Footer', 'duffy-portfolio' ),
 		)
 	);
 

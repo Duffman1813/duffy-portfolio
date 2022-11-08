@@ -36,8 +36,9 @@ get_header();
                     <li></li>
             </ul>
     </div >
-
+    
     <div class="front-container">
+    <div class="reveal">
 
 <?php	
 	$args = array(
@@ -70,12 +71,17 @@ if ( $query -> have_posts() ) : ?>
         ?>
     </section>
 <?php endif; ?>
+</div>
 
 <section class="about-front">
   <div class="reveal">
     <h2>About Me</h2>
     <div class="text-container">
       <div class="text-box">
+
+      <?php if( get_field('about_bio', 10) ): ?>
+<?php the_field('about_bio', 10); ?>
+<?php endif; ?>
 
 
       </div>
@@ -89,10 +95,52 @@ if ( $query -> have_posts() ) : ?>
     <h2>Technical Skills</h2>
     <div class="text-container">
       <div class="text-box">
-      
-   
+
+<?php 
+$skills1 = ( get_field('skills_title', 10));
+if( $skills1): ?>
+  <h3 class="caption"><?php echo esc_html($skills1); ?></h3>
+  <?php endif; ?>
+
+
+<?php 
+$images = get_field('skills_gallery', 10);
+if( $images ): ?>
+    <ul class="skills-gallery">
+        <?php foreach( $images as $image ): ?>
+            <li>
+                <a href="<?php echo esc_url($image['url']); ?>">
+                     <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                </a>
+                <p class="caption"><?php echo esc_html($image['caption']); ?></p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+    
       </div>
       <div class="text-box">
+
+<?php 
+$skills2 = ( get_field('skills_title_2', 10));
+if( $skills2): ?>
+  <h3 class="caption"><?php echo esc_html($skills2); ?></h3>
+  <?php endif; ?>
+
+<?php 
+$images = get_field('skills_gallery_2', 10);
+if( $images ): ?>
+    <ul class="skills-gallery">
+        <?php foreach( $images as $image ): ?>
+            <li>
+                <a href="<?php echo esc_url($image['url']); ?>">
+                     <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                </a>
+                <p class="caption"><?php echo esc_html($image['caption']); ?></p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
 
 
       </div>

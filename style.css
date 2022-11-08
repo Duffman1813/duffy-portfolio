@@ -808,7 +808,6 @@ textarea {
 .home h2 {
 	font-weight: 300;
 	text-align: center;
-	color: #111;
 	font-size: 2rem;
 	text-transform: uppercase;
 	transform: translateX(100px);
@@ -904,6 +903,11 @@ textarea {
 	padding: 10px;
 }
 
+.text-box {
+	border-radius: 5px;
+	box-shadow: 0 0 50px 0 rgba(28, 9, 80, 0.5);
+}
+
 .text-container .text-box h3 {
 	font-size: 30px;
 	text-align: center;
@@ -922,8 +926,8 @@ textarea {
 }
 
 .text-box img {
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 }
 
 .reveal {
@@ -939,9 +943,8 @@ textarea {
 }
 
 .area {
-	background: #4e54c8;
-	background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-	height: 50vh;
+	background: #c6b3fa;
+	height: 100vh;
 	grid-column: 1/4;
 }
 
@@ -950,7 +953,7 @@ textarea {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 66vh;
+	height: 110vh;
 	overflow: hidden;
 }
 
@@ -1038,10 +1041,6 @@ textarea {
 	height: 150px;
 	animation-delay: 0s;
 	animation-duration: 11s;
-}
-
-.about-front {
-	background-color: rgb(242, 243, 246);
 }
 
 @keyframes animate {
@@ -1137,46 +1136,27 @@ textarea {
 		margin: 0;
 	}
 }
-.page-id-14 h1 {
-	text-align: center;
-	font-size: 3rem;
+.page-id-12 .wpforms-validate {
+	padding: 10px;
+}
+.page-id-12 .wpforms-container {
+	margin: 0 30px;
+	padding: 10px;
+	background-color: #c6b3fa;
+	border-radius: 5px;
+	box-shadow: 0 0 50px 0 rgba(28, 9, 80, 0.5);
+}
+.page-id-12 .wpforms-container label {
+	color: #1c0950;
+}
+.page-id-12 .wpforms-container button {
+	background-color: #1c0950;
+	color: white;
+}
+.page-id-12 .entry-header h1 {
+	z-index: 5;
 	color: black;
-	transform: translateY(-150px);
-	animation: 1.2s slideIn ease-in-out forwards 1s;
-	z-index: 10;
-	opacity: 0;
-	position: relative;
-}
-
-.page-id-14 h1::before {
-	display: none;
-	/* content: '';
-	width: 0%;
-	height: 0.3rem;
-	background-color: yellow;
-	position: absolute;
-	bottom: -10px;
-	animation: 1s underline ease-in-out forwards 2s;
-	mix-blend-mode: screen; */
-}
-
-#wpforms-form-58 {
-	border: 1px solid lightgray;
-	border-radius: 16px;
-	box-shadow: 1px 1px #aaa;
-	padding: 20px;
-	margin: 20px;
-	background-color: #eee;
-}
-
-#wpforms-form-58 button {
-	background-color: lightcyan;
-	border-radius: 16px;
-}
-
-#wpforms-form-58 input {
-	background-color: lightcyan;
-	border-radius: 16px;
+	text-align: center;
 }
 
 .project-page {
@@ -1313,7 +1293,7 @@ textarea {
 /* Header
 --------------------------------------------- */
 .site-header {
-	background-color: #111;
+	background-color: #1c0950;
 	color: #fff;
 }
 
@@ -1394,7 +1374,7 @@ textarea {
 	justify-content: center;
 	bottom: 0;
 	z-index: 1001;
-	background-color: black;
+	background-color: #1c0950;
 	color: white;
 	height: 100px;
 }
@@ -1449,6 +1429,7 @@ section h2 {
 
 section .text-container {
 	display: flex;
+	justify-content: space-around;
 }
 
 section .text-container .text-box {
