@@ -1,12 +1,16 @@
 .page-id-12 {
 
+    article {
+        position: relative;
+    }
+
     .wpforms-validate {
         padding: 10px;
     }
 
     .wpforms-container {
         margin: 0 30px;
-        padding: 10px;
+        padding: 20px;
         background-color: #c6b3fa;
         border-radius: 5px;
         box-shadow: 0 0 50px 0 rgb(28 9 80 / 50%);
@@ -15,15 +19,35 @@
             color: #1c0950;
         }
 
-        button {
-            background-color: #1c0950;
-            color: white;
-        }
     }
 
-    .entry-header h1 {
+    div.wpforms-container-full .wpforms-form button {
+        background-color: #1c0950;
+        color: white;
+        border-radius: 24px;
+    }
+
+    .entry-header {
+        position: absolute;
+        top: -1rem;
+        left: 0;
+        right: 0;
         z-index: 5;
         color: black;
         text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .page-id-12 {
+
+        article {
+            grid-column: 2/6;
+        }
+
+        .wpforms-container {
+            grid-column: 2/4;
+        }
     }
 }

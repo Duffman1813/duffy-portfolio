@@ -24,16 +24,16 @@ get_header();
 
 <div class="area" >
             <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>HIRE ME</li>
+                    <li>HIRE ME</li>
+                    <li>HIRE ME</li>
+                    <li>HIRE ME</li>
+                    <li>HIRE ME</li>
+                    <li>HIRE ME</li>
+                    <li>HIRE ME</li>
+                    <li>HIRE ME</li>
+                    <li>HIRE ME</li>
+                    <li>HIRE ME</li>
             </ul>
     </div >
     

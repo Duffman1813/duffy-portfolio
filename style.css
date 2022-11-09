@@ -641,7 +641,7 @@ textarea {
 	}
 	.site-main {
 		display: grid;
-		grid-template-columns: 1fr minmax(0, 650px) minmax(0, 650px) 1fr;
+		grid-template-columns: repeat(6, 1fr);
 	}
 	.site-footer {
 		display: grid;
@@ -667,7 +667,7 @@ textarea {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-	background-color: #111;
+	background-color: #1c0950;
 }
 
 .main-navigation ul li:hover > ul,
@@ -800,9 +800,7 @@ textarea {
 }
 
 .front-container {
-	padding: 0 30px;
 	max-width: 100%;
-	grid-column: 2/3;
 }
 
 .home h2 {
@@ -818,13 +816,16 @@ textarea {
 
 .projects {
 	display: flex;
+	padding: 0 20px;
 	flex-wrap: wrap;
 	gap: 0;
 	justify-content: space-around;
 }
 
 .home-projects {
-	padding: 30px;
+	display: flex;
+	padding: 20px;
+	gap: 1;
 	margin-bottom: 20px;
 	border-radius: 5px;
 	box-shadow: 0 0 50px 0 rgba(28, 9, 80, 0.5);
@@ -1057,14 +1058,13 @@ textarea {
 }
 @media screen and (min-width: 768px) {
 	.area {
-		grid-column: 1/5;
+		grid-column: 1/7;
 	}
 	.context {
-		grid-column: 1/5;
+		grid-column: 1/7;
 	}
 	.front-container {
-		padding: 0;
-		grid-column: 2/4;
+		grid-column: 2/6;
 	}
 	.projects {
 		grid-column: 1/4;
@@ -1081,13 +1081,17 @@ textarea {
 		grid-column: 1/4;
 	}
 	.about-front {
-		grid-column: 1/4;
+		margin: 0 80px;
 	}
 	.contact-info {
 		grid-column: 1/4;
 	}
 	.skills {
 		grid-column: 1/4;
+	}
+	.home .overview {
+		margin: 0 auto;
+		width: 40%;
 	}
 }
 .page-id-7 .entry-header {
@@ -1135,13 +1139,19 @@ textarea {
 		padding: 0;
 		margin: 0;
 	}
+	.about-wrapper {
+		grid-column: 2/6;
+	}
+}
+.page-id-12 article {
+	position: relative;
 }
 .page-id-12 .wpforms-validate {
 	padding: 10px;
 }
 .page-id-12 .wpforms-container {
 	margin: 0 30px;
-	padding: 10px;
+	padding: 20px;
 	background-color: #c6b3fa;
 	border-radius: 5px;
 	box-shadow: 0 0 50px 0 rgba(28, 9, 80, 0.5);
@@ -1149,18 +1159,59 @@ textarea {
 .page-id-12 .wpforms-container label {
 	color: #1c0950;
 }
-.page-id-12 .wpforms-container button {
+.page-id-12 div.wpforms-container-full .wpforms-form button {
 	background-color: #1c0950;
 	color: white;
+	border-radius: 24px;
 }
-.page-id-12 .entry-header h1 {
+.page-id-12 .entry-header {
+	position: absolute;
+	top: -1rem;
+	left: 0;
+	right: 0;
 	z-index: 5;
 	color: black;
 	text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+	.page-id-12 article {
+		grid-column: 2/6;
+	}
+	.page-id-12 .wpforms-container {
+		grid-column: 2/4;
+	}
+}
+.projects-template-default article {
+	padding: 30px;
+}
+
 .project-page {
 	padding: 0 30px;
+}
+
+.archive-projects {
+	padding: 0 20px;
+}
+
+.archive-projects article {
+	position: relative;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 50px 0 rgba(28, 9, 80, 0.5);
+}
+
+.archive-projects h3 {
+	font-size: 1.5rem;
+	position: absolute;
+	color: white;
+	top: 0;
+	z-index: 2;
+}
+
+.archive-projects a {
+	text-decoration: none;
 }
 
 .post-thumbnail {
@@ -1177,13 +1228,25 @@ textarea {
 	color: white;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
 	.project-wrapper {
 		display: flex;
 		grid-column: 1/5;
 	}
+	.archive-projects {
+		display: flex;
+		flex-wrap: wrap;
+		grid-column: 2/6;
+	}
+	.archive-projects h2 {
+		width: 100%;
+	}
+	.archive .archive-projects h3 {
+		font-size: 2.5rem;
+		padding: 0 20px;
+	}
 	.entry-header h1 {
-		font-size: 3rem;
+		font-size: 4rem;
 	}
 }
 /* Comments

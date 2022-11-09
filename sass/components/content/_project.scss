@@ -1,5 +1,33 @@
+.projects-template-default article {
+    padding: 30px;
+}
+
 .project-page {
     padding: 0 30px;
+}
+
+.archive-projects {
+    padding: 0 20px;
+}
+
+.archive-projects article {
+    position: relative;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 50px 0 rgb(28 9 80 / 50%);
+}
+
+.archive-projects h3 {
+    font-size: 1.5rem;
+    position: absolute;
+    color: white;
+    top: 0;
+    z-index: 2;
+}
+
+.archive-projects a {
+    text-decoration: none;
 }
 
 .post-thumbnail {
@@ -16,15 +44,30 @@
     color: white;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
     .project-wrapper {
         display: flex;
         grid-column: 1/5;
 
     }
 
+    .archive-projects {
+        display: flex;
+        flex-wrap: wrap;
+        grid-column: 2/6;
+    }
+
+    .archive-projects h2 {
+        width: 100%;
+    }
+
+    .archive .archive-projects h3 {
+        font-size: 2.5rem;
+        padding: 0 20px;
+    }
+
     .entry-header h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
 }

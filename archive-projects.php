@@ -28,7 +28,7 @@ $args = array(
 $query = new WP_Query( $args );
  
 if ( $query->have_posts() ) {
-	echo '<section><h2>' . esc_html__( 'Design', 'projects' ). '</h2>';
+	echo '<section class="archive-projects"><h2>' . esc_html__( 'Design', 'projects' ). '</h2>';
     while ( $query->have_posts() ) {
         $query->the_post();
 		?>
@@ -36,15 +36,20 @@ if ( $query->have_posts() ) {
 <article>
 
 	<a href="<?php the_permalink(); ?>">
+        <?php the_post_thumbnail()?>
 		<h3><?php the_title(); ?></h3>
-		<?php the_post_thumbnail()?>
+
+<?php
+if ( get_field( 'overview_title' ) ) {
+				echo '<h4 class="overview-title">'. esc_html( get_field('overview_title') ) .'</h4>';
+			 }
+
+			 if ( get_field( 'overview' ) ) {
+				echo '<p class="overview">'. esc_html( get_field('overview') ) .'</p>';
+			 }
+             ?>
+             <h4>Learn More -></h4>
 	</a>
-	<?php
-
-the_excerpt();
-
-?>
-
 </article>
 
 		<?php
@@ -70,7 +75,7 @@ $args = array(
 $query = new WP_Query( $args );
  
 if ( $query->have_posts() ) {
-	echo '<section><h2>' . esc_html__( 'Development', 'projects' ). '</h2>';
+	echo '<section class="archive-projects"><h2>' . esc_html__( 'Development', 'projects' ). '</h2>';
     while ( $query->have_posts() ) {
         $query->the_post();
 		?>
@@ -78,14 +83,20 @@ if ( $query->have_posts() ) {
 <article>
 
 	<a href="<?php the_permalink(); ?>">
+        <?php the_post_thumbnail();?>
 		<h3><?php the_title(); ?></h3>
-		<?php the_post_thumbnail();?>
+
+        <?php
+if ( get_field( 'overview_title' ) ) {
+				echo '<h4 class="overview-title">'. esc_html( get_field('overview_title') ) .'</h4>';
+			 }
+
+			 if ( get_field( 'overview' ) ) {
+				echo '<p class="overview">'. esc_html( get_field('overview') ) .'</p>';
+			 }
+             ?>
+                <h4>Learn More -></h4>
 	</a>
-	<?php
-
-the_excerpt();
-
-?>
 
 </article>
 

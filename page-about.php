@@ -17,20 +17,10 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	<section class="about-wrapper">
+<?php  
 
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-<?php      echo '<fieldset class="about-container">';
+echo '<fieldset class="about-container">';
 
 					 if ( get_field( 'about_title' ) ) {
 						echo '<legend class="about-title">'. esc_html( get_field('about_title') ) .'</legend>';
@@ -81,7 +71,7 @@ if( $images ): ?>
     </ul>
 <?php endif; ?>
 
-
+</section>
 		
 		
 

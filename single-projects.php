@@ -54,6 +54,20 @@ get_header();
 			 if ( get_field( 'requirements_description' ) ) {
 				echo '<p class="requirements-description">'. esc_html( get_field('requirements_description') ) .'</p>';
 			 }
+			 ?>
+
+			 <?php 
+			 $link = get_field('live_site');
+			 if( $link ): ?>
+				 <a class="button" href="<?php echo esc_url( $link ); ?>">Live Site</a>
+			 <?php endif; ?>
+
+			 <?php 
+			 $link2 = get_field('github_link');
+			 if( $link ): ?>
+				 <a class="button" href="<?php echo esc_url( $link2 ); ?>">Github Repo</a>
+			 <?php endif; ?>
+			 <?php
 
 			 the_post_navigation(
 				array(
