@@ -168,6 +168,10 @@
     }
 }
 
+.contact-intro {
+    padding: 0 20px;
+}
+
 .contact-menu {
     margin: 0 auto;
     width: 300px;
@@ -201,6 +205,14 @@
             grid-column: 1/7;
         }
 
+        .circles {
+            height: 33vh;
+        }
+
+        .contact-intro {
+            grid-column: 2/6;
+        }
+
         .contact-wrapper {
             display: flex;
             justify-content: space-between;
@@ -214,7 +226,7 @@
         }
 
         .contact-menu {
-            margin: 0 30px;
+            margin: 0 auto;
             align-items: center;
             grid-column: 4/6;
         }

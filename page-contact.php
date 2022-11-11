@@ -59,13 +59,17 @@ if( $images ): ?>
 
 <?php endif; ?>        
 
+<section class="contact-intro">
 
+          <h3>Looking to join a great team and become a valued aspect of that team. Feel free to send me a message or contact me through email or LinkedIn. Your time is much appreciated</h3>
+
+</section>
 
    <div class="contact-wrapper">
 		      <?php
 		      while ( have_posts() ) :
 			    the_post();
-			
+
 			    echo '<section class="contact-form">'. do_shortcode('[wpforms id="68"]') .'</section>';?>
 
 		      <?php endwhile; ?>

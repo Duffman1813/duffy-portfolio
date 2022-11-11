@@ -1225,7 +1225,6 @@ span {
 }
 .page-id-10 .about-title {
 	font-size: 2rem;
-	color: white;
 }
 .page-id-10 .about-title,
 .page-id-10 .skills-title {
@@ -1407,6 +1406,10 @@ span {
 	text-align: center;
 }
 
+.contact-intro {
+	padding: 0 20px;
+}
+
 .contact-menu {
 	margin: 0 auto;
 	width: 300px;
@@ -1433,6 +1436,12 @@ span {
 	.page-id-12 .entry-title {
 		grid-column: 1/7;
 	}
+	.page-id-12 .circles {
+		height: 33vh;
+	}
+	.page-id-12 .contact-intro {
+		grid-column: 2/6;
+	}
 	.page-id-12 .contact-wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -1444,7 +1453,7 @@ span {
 		grid-column: 2/4;
 	}
 	.page-id-12 .contact-menu {
-		margin: 0 30px;
+		margin: 0 auto;
 		align-items: center;
 		grid-column: 4/6;
 	}
@@ -1782,6 +1791,11 @@ section h2 {
 	font-size: 40px;
 	text-align: center;
 	text-transform: uppercase;
+}
+
+section h3 {
+	font-size: 40px;
+	text-align: center;
 }
 
 section .text-container {
