@@ -75,7 +75,34 @@ get_header();
 
 			 </section>
 
-			 <section cla>
+			 <div class="design-process">
+
+<?php 
+ if ( get_field( 'design_title' ) ) {
+	echo '<h3 class="design-title">'. esc_html( get_field('design_title') ) .'</h3>';
+ }
+
+$images = get_field('design_gallery');
+if( $images ): ?>
+<ul class="design-gallery">
+<?php foreach( $images as $image ): ?>
+<li>
+  <img src="<?php echo esc_url($image['sizes']['landscape-blog']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+</li>
+<?php endforeach; ?>
+</ul>
+<?php endif; ?>
+
+<?php
+if ( get_field( 'design_description' ) ) {
+				echo '<p class="design-description">'. esc_html( get_field('design_description') ) .'</p>';
+			 }
+			 ?>
+
+</div>
+
+
+			 <section >
 			 <?php
 
 			 the_post_navigation(

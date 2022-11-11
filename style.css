@@ -1469,6 +1469,18 @@ span {
 	padding: 0 30px;
 }
 
+.design-process {
+	padding: 0 30px 30px 30px;
+}
+
+.design-gallery {
+	padding: 30px 0;
+}
+.design-gallery li {
+	list-style: none;
+	padding: 10px 0;
+}
+
 .nav-links {
 	display: flex;
 	justify-content: space-between;
@@ -1547,6 +1559,12 @@ span {
 	}
 	.entry-header h1 {
 		font-size: 4rem;
+	}
+	.design-gallery {
+		display: flex;
+	}
+	.design-gallery li {
+		padding: 10px;
 	}
 }
 /* Comments
