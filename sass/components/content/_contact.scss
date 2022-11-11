@@ -168,7 +168,6 @@
     }
 }
 
-
 .contact-menu {
     margin: 0 auto;
     width: 300px;
@@ -203,9 +202,10 @@
         }
 
         .contact-wrapper {
-            grid-column: 1/7;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr)
+            display: flex;
+            justify-content: space-between;
+            margin: 40px;
+            grid-column: 2/6;
         }
 
         .contact-form {

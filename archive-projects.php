@@ -36,7 +36,7 @@ if ( $query->have_posts() ) {
 <article>
 
 	<a href="<?php the_permalink(); ?>">
-        <?php the_post_thumbnail()?>
+        <?php the_post_thumbnail('project-page')?>
 		<h3><?php the_title(); ?></h3>
 
 <?php
@@ -44,9 +44,10 @@ if ( get_field( 'overview_title' ) ) {
 				echo '<h4 class="overview-title">'. esc_html( get_field('overview_title') ) .'</h4>';
 			 }
 
-			 if ( get_field( 'overview' ) ) {
+             if ( get_field( 'overview' ) ) {
 				echo '<p class="overview">'. esc_html( get_field('overview') ) .'</p>';
 			 }
+
              ?>
              <h4>Learn More -></h4>
 	</a>
@@ -83,7 +84,7 @@ if ( $query->have_posts() ) {
 <article>
 
 	<a href="<?php the_permalink(); ?>">
-        <?php the_post_thumbnail();?>
+        <?php the_post_thumbnail('project-page');?>
 		<h3><?php the_title(); ?></h3>
 
         <?php
@@ -91,9 +92,10 @@ if ( get_field( 'overview_title' ) ) {
 				echo '<h4 class="overview-title">'. esc_html( get_field('overview_title') ) .'</h4>';
 			 }
 
-			 if ( get_field( 'overview' ) ) {
+             if ( get_field( 'overview' ) ) {
 				echo '<p class="overview">'. esc_html( get_field('overview') ) .'</p>';
 			 }
+
              ?>
                 <h4>Learn More -></h4>
 	</a>

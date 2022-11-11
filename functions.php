@@ -47,6 +47,7 @@ function duffy_portfolio_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	add_image_size('landscape-blog', 533, 300,true);
+	add_image_size('project-page', 1066, 600,true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(

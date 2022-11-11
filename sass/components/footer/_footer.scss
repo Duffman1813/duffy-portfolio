@@ -1,5 +1,4 @@
 .site-footer {
-    position: fixed;
     display: block;
     bottom: 0;
     z-index: 1001;
@@ -13,7 +12,6 @@
 .footer-navigation li.current_page_item>a {
     border-top: 4px solid white;
 }
-
 
 .creator {
     text-align: center;
@@ -40,45 +38,16 @@
     margin: 0 auto;
 }
 
-@media screen and (min-width: 50em) {
-
-    .footer-menu {
-        display: none;
-    }
+@media screen and (max-width: 50em) {
 
     .site-footer {
-        display: grid;
-        grid-template-columns: 1fr minmax(auto, 1300px) 1fr;
-        justify-content: center;
-        margin-top: 1.5rem;
-        bottom: 0;
-        z-index: 1001;
-        background-color: rgb(68, 68, 253);
-        color: white;
-        height: 100px;
+        position: fixed;
     }
 }
 
-// .sticky {
-//     display: block;
-// }
+@media screen and (min-width: 50em) {
 
-// .post,
-// .page {
-//     margin: 0 0 1.5em;
-// }
-
-// .updated:not(.published) {
-//     display: none;
-// }
-
-// .page-content,
-// .entry-content,
-// .entry-summary {
-//     margin: 1.5em 0 0;
-// }
-
-// .page-links {
-//     clear: both;
-//     margin: 0 0 1.5em;
-// }
+    .footer-menu {
+        grid-column: 3/5;
+    }
+}

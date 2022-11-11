@@ -19,11 +19,10 @@
 				</nav>
 		</div>
 		
-<div class="creator">
-<p>Shaun Duffy</p>
-</div>
+		<div class="creator">
+			<p>Shaun Duffy</p>
+		</div>
 	
-
 	</footer>
 
 <?php wp_footer(); ?>

@@ -1,10 +1,10 @@
 .main-navigation {
 	display: none;
-	// width: 100%;
-	// position: absolute;
-	// top: 5.5rem;
-	// right: 0;
-	// z-index: 1000;
+	width: 100%;
+	position: absolute;
+	top: 5.5rem;
+	right: 0;
+	z-index: 1000;
 }
 
 .main-navigation ul {
@@ -22,11 +22,9 @@
 	color: #111;
 }
 
-
 .main-navigation li {
 	position: relative;
 }
-
 
 .main-navigation li.current-menu-item>a,
 .main-navigation li.current_page_item>a {
@@ -81,6 +79,7 @@
 	}
 
 	.main-navigation {
+		display: block;
 		width: auto;
 		position: relative;
 		top: 0;

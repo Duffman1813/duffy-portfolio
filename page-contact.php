@@ -57,29 +57,31 @@ if( $images ): ?>
 
 
 
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
+   <div class="contact-wrapper">
+		      <?php
+		      while ( have_posts() ) :
+			    the_post();
 			
-			echo '<section class="contact-form">'. do_shortcode('[wpforms id="68"]') .'</section>';?>
+			    echo '<section class="contact-form">'. do_shortcode('[wpforms id="68"]') .'</section>';?>
 
-		<?php endwhile; ?>
+		      <?php endwhile; ?>
 
-		<section class="contact-menu">
+		  <section class="contact-menu">
 
-		<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-contact',
-					'menu_id'        => 'menu-contact',
-				)
-			);
-			?>
+		      <?php
+			    wp_nav_menu(
+				    array(
+					    'theme_location' => 'menu-contact',
+					    'menu_id'        => 'menu-contact',
+				    )
+			    );
+			    ?>
 
-		</section>
+		  </section>
 
-		</div>
+  </div>
+  
+</div>
 
 	</main><!-- #main -->
 

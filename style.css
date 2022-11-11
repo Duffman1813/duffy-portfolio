@@ -536,9 +536,6 @@ table {
 a {
 	color: #4169e1;
 }
-a:visited {
-	color: #fff;
-}
 a:hover, a:focus, a:active {
 	color: white;
 }
@@ -547,9 +544,7 @@ a:focus {
 }
 a:hover, a:active {
 	outline: 0;
-}
-
-/* Forms
+} /* Forms
 --------------------------------------------- */
 button,
 input[type=button],
@@ -643,6 +638,7 @@ textarea {
 	.site-main {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
+		margin: 0;
 	}
 	.site-footer {
 		display: grid;
@@ -656,6 +652,11 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
 	display: none;
+	width: 100%;
+	position: absolute;
+	top: 5.5rem;
+	right: 0;
+	z-index: 1000;
 }
 
 .main-navigation ul {
@@ -730,6 +731,7 @@ textarea {
 		display: none;
 	}
 	.main-navigation {
+		display: block;
 		width: auto;
 		position: relative;
 		top: 0;
@@ -798,6 +800,7 @@ textarea {
 
 .front-container {
 	max-width: 100%;
+	margin-bottom: 40px;
 }
 
 span {
@@ -1431,9 +1434,10 @@ span {
 		grid-column: 1/7;
 	}
 	.page-id-12 .contact-wrapper {
-		grid-column: 1/7;
-		display: grid;
-		grid-template-columns: repeat(6, 1fr);
+		display: flex;
+		justify-content: space-between;
+		margin: 40px;
+		grid-column: 2/6;
 	}
 	.page-id-12 .contact-form {
 		margin: 0 30px;
@@ -1448,31 +1452,56 @@ span {
 .projects-template-default article {
 	padding: 30px;
 }
+.projects-template-default article img {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.project-wrapper {
+	margin-bottom: 40px;
+}
+
+.overview {
+	color: #1c0950;
+}
 
 .project-page {
 	padding: 0 30px;
 }
-.project-page .button {
+
+.nav-links {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+.nav-links span {
+	color: #fff;
+}
+.nav-links a {
+	text-decoration: none;
+	background-color: #1c0950;
+	padding: 10px;
+}
+
+.link-buttons {
+	display: flex;
+	justify-content: space-around;
+}
+.link-buttons .button {
 	background-color: #1c0950;
 	color: white;
 	text-decoration: none;
 	margin: 20px;
-	padding: 20px;
+	padding: 10px 20px;
+	border-radius: 5px;
 	border: 2px solid #1c0950;
 }
-.project-page .button:hover {
+.link-buttons .button:hover {
 	background-color: white;
 	color: #1c0950;
 }
-.project-page nav {
+.link-buttons nav {
 	padding: 30px;
-}
-.project-page a {
-	background-color: #1c0950;
-}
-
-.archive-projects {
-	padding: 0 20px;
 }
 
 .archive-projects article {
@@ -1664,7 +1693,6 @@ span {
 /* Footer
 --------------------------------------------- */
 .site-footer {
-	position: fixed;
 	display: block;
 	bottom: 0;
 	z-index: 1001;
@@ -1704,20 +1732,14 @@ span {
 	margin: 0 auto;
 }
 
+@media screen and (max-width: 50em) {
+	.site-footer {
+		position: fixed;
+	}
+}
 @media screen and (min-width: 50em) {
 	.footer-menu {
-		display: none;
-	}
-	.site-footer {
-		display: grid;
-		grid-template-columns: 1fr minmax(auto, 1300px) 1fr;
-		justify-content: center;
-		margin-top: 1.5rem;
-		bottom: 0;
-		z-index: 1001;
-		background-color: rgb(68, 68, 253);
-		color: white;
-		height: 100px;
+		grid-column: 3/5;
 	}
 }
 /* Scroll

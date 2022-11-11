@@ -1,16 +1,52 @@
 .projects-template-default article {
     padding: 30px;
+
+    img {
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+}
+
+.project-wrapper {
+    margin-bottom: 40px;
+}
+
+.overview {
+    color: #1c0950;
 }
 
 .project-page {
     padding: 0 30px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    span {
+        color: #fff;
+    }
+
+    a {
+        text-decoration: none;
+        background-color: #1c0950;
+        padding: 10px;
+    }
+}
+
+.link-buttons {
+
+    display: flex;
+    justify-content: space-around;
 
     .button {
         background-color: #1c0950;
         color: white;
         text-decoration: none;
         margin: 20px;
-        padding: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
         border: 2px solid #1c0950;
         ;
 
@@ -23,14 +59,6 @@
     nav {
         padding: 30px;
     }
-
-    a {
-        background-color: #1c0950;
-    }
-}
-
-.archive-projects {
-    padding: 0 20px;
 }
 
 .archive-projects article {

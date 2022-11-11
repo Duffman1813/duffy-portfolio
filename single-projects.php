@@ -54,8 +54,11 @@ get_header();
 			 if ( get_field( 'requirements_description' ) ) {
 				echo '<p class="requirements-description">'. esc_html( get_field('requirements_description') ) .'</p>';
 			 }
-			 ?>
+		
+			  echo '</section>';
+			  ?>
 
+<section class="link-buttons">
 			 <?php 
 			 $link = get_field('live_site');
 			 if( $link ): ?>
@@ -67,19 +70,22 @@ get_header();
 			 if( $link ): ?>
 				 <a class="button" href="<?php echo esc_url( $link2 ); ?>">Github Repo</a>
 			 <?php endif; ?>
+
+			 </section>
+
+			 <section cla>
 			 <?php
 
 			 the_post_navigation(
 				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'duffy-portfolio' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'duffy-portfolio' ) . '</span> <span class="nav-title">%title</span>',
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__( '<-', 'duffy-portfolio' ) . '</span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-title">%title</span> <span class="nav-subtitle">' . esc_html__( '->', 'duffy-portfolio' ) . '</span>',
 				)
 			);
 
-			 echo '</section>';
-			 
 		endwhile; 
 		?>
+		</section>
 
 </div>
 
