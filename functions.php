@@ -46,13 +46,14 @@ function duffy_portfolio_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size('landscape-blog', 400, 300, true);
+	add_image_size('landscape-blog', 533, 300,true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'duffy-portfolio' ),
 			'footer' => esc_html__( 'Footer', 'duffy-portfolio' ),
+			'menu-contact' => esc_html__( 'Contact', 'duffy-portfolio' ),
 		)
 	);
 

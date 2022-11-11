@@ -1,10 +1,10 @@
 .main-navigation {
-	display: block;
-	width: 100%;
-	position: absolute;
-	top: 5.5rem;
-	right: 0;
-	z-index: 1000;
+	display: none;
+	// width: 100%;
+	// position: absolute;
+	// top: 5.5rem;
+	// right: 0;
+	// z-index: 1000;
 }
 
 .main-navigation ul {
@@ -12,7 +12,7 @@
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-	background-color: #1c0950;
+	background-color: rgb(68, 68, 253);
 }
 
 .main-navigation ul li:hover>ul,
@@ -31,7 +31,8 @@
 .main-navigation li.current-menu-item>a,
 .main-navigation li.current_page_item>a {
 	text-decoration: underline;
-	text-decoration-color: #fff200;
+	text-decoration-thickness: 0.3rem;
+	text-decoration-color: #fff;
 }
 
 .main-navigation li:hover>a,
@@ -84,7 +85,7 @@
 		position: relative;
 		top: 0;
 		align-self: center;
-		grid-column: 3/4;
+		grid-column: 4/6;
 	}
 
 	.main-navigation a {
@@ -94,7 +95,7 @@
 	.main-navigation ul,
 	.main-navigation.toggled ul {
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 	}
 
 	.main-navigation ul ul {

@@ -1,5 +1,5 @@
 .site-header {
-    background-color: #1c0950;
+    background-color: rgb(68, 68, 253);
     color: #fff;
 }
 
@@ -27,9 +27,8 @@
 
 @media screen and (min-width: 50em) {
 
-    .site-header {
-        display: grid;
-        grid-template-columns: 1fr minmax(0, 650px) minmax(0, 650px) 1fr;
+    .site-title {
+        text-align: start;
     }
 
     .site-branding {

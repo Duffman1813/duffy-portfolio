@@ -24,18 +24,35 @@ get_header();
 
 <div class="area" >
             <ul class="circles">
-                    <li>HIRE ME</li>
-                    <li>HIRE ME</li>
-                    <li>HIRE ME</li>
-                    <li>HIRE ME</li>
-                    <li>HIRE ME</li>
-                    <li>HIRE ME</li>
-                    <li>HIRE ME</li>
-                    <li>HIRE ME</li>
-                    <li>HIRE ME</li>
-                    <li>HIRE ME</li>
+            <?php 
+$images = get_field('skills_gallery', 10);
+if( $images ): ?>
+ 
+        <?php foreach( $images as $image ): ?>
+            <li>
+              <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+              </li>
+        <?php endforeach; ?>
+
+<?php endif; ?>
+
+<?php 
+$skills2 = ( get_field('skills_title_2', 10));
+if( $skills2): ?>
+  <?php endif; ?>
+
+<?php 
+$images = get_field('skills_gallery_2', 10);
+if( $images ): ?>
+        <?php foreach( $images as $image ): ?>
+            <li>
+              <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+            </li>
+        <?php endforeach; ?>
+
+<?php endif; ?>
             </ul>
-    </div >
+        </div>
     
     <div class="front-container">
     <div class="reveal">
@@ -63,6 +80,7 @@ if ( $query -> have_posts() ) : ?>
                 <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('landscape-blog'); ?>
                     <h3><?php the_title(); ?></h3>
+                    <span>Learn More -></span>
                 </a>
             </article>
             <?php
@@ -107,12 +125,9 @@ if( $skills1): ?>
 $images = get_field('skills_gallery', 10);
 if( $images ): ?>
     <ul class="skills-gallery">
-        <?php foreach( $images as $image ): ?>
+    <?php foreach( $images as $image ): ?>
             <li>
-                <a href="<?php echo esc_url($image['url']); ?>">
-                     <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                </a>
-                <p class="caption"><?php echo esc_html($image['caption']); ?></p>
+              <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
             </li>
         <?php endforeach; ?>
     </ul>
@@ -131,12 +146,9 @@ if( $skills2): ?>
 $images = get_field('skills_gallery_2', 10);
 if( $images ): ?>
     <ul class="skills-gallery">
-        <?php foreach( $images as $image ): ?>
+    <?php foreach( $images as $image ): ?>
             <li>
-                <a href="<?php echo esc_url($image['url']); ?>">
-                     <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                </a>
-                <p class="caption"><?php echo esc_html($image['caption']); ?></p>
+              <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
             </li>
         <?php endforeach; ?>
     </ul>
@@ -152,13 +164,16 @@ if( $images ): ?>
   <div class="reveal">
     <h2>Contact</h2>
     <div class="text-container">
-    <div class="text-box">
-      <a href="mailto:duffy13@hotmail.com">
-        <h4>Email</h4>
-      </a>
-      <a href="https://www.linkedin.com">
-        <h4>LinkedIn</h4>
-      </a>
+    <div class="contact-menu">
+ 
+    <?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-contact',
+					'menu_id'        => 'menu-contact',
+				)
+			);
+			?>
 
     </div>
     </div>

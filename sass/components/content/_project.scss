@@ -4,6 +4,29 @@
 
 .project-page {
     padding: 0 30px;
+
+    .button {
+        background-color: #1c0950;
+        color: white;
+        text-decoration: none;
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid #1c0950;
+        ;
+
+        &:hover {
+            background-color: white;
+            color: #1c0950;
+        }
+    }
+
+    nav {
+        padding: 30px;
+    }
+
+    a {
+        background-color: #1c0950;
+    }
 }
 
 .archive-projects {
@@ -20,10 +43,6 @@
 
 .archive-projects h3 {
     font-size: 1.5rem;
-    position: absolute;
-    color: white;
-    top: 0;
-    z-index: 2;
 }
 
 .archive-projects a {
@@ -35,20 +54,13 @@
     z-index: 1;
 }
 
-.entry-header {
-    position: absolute;
-    z-index: 2;
-}
-
 .entry-header h1 {
-    color: white;
+    color: #1c0950;
 }
 
 @media screen and (min-width: 768px) {
     .project-wrapper {
-        display: flex;
-        grid-column: 1/5;
-
+        grid-column: 2/6;
     }
 
     .archive-projects {

@@ -1,7 +1,19 @@
-.footer-menu {
-    margin: 15px;
-    grid-column: 1/5;
+.site-footer {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    z-index: 1001;
+    background-color: rgb(68, 68, 253);
+    color: white;
+    width: 100vw;
+    height: 100px;
 }
+
+.footer-navigation li.current-menu-item>a,
+.footer-navigation li.current_page_item>a {
+    border-top: 4px solid white;
+}
+
 
 .creator {
     text-align: center;
@@ -14,16 +26,13 @@
     padding: 0;
 }
 
-.menu-footer-container a {
+.footer-navigation li a {
     display: block;
+    padding: 10px 0 0 0;
     font-size: 1.3rem;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-}
-
-.menu-footer-container a:hover {
-    background-color: blue;
 }
 
 .menu-footer-container ul {
@@ -32,43 +41,44 @@
 }
 
 @media screen and (min-width: 50em) {
+
     .footer-menu {
         display: none;
     }
+
+    .site-footer {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1300px) 1fr;
+        justify-content: center;
+        margin-top: 1.5rem;
+        bottom: 0;
+        z-index: 1001;
+        background-color: rgb(68, 68, 253);
+        color: white;
+        height: 100px;
+    }
 }
 
-.site-footer {
-    display: grid;
-    grid-template-columns: 1fr minmax(auto, 1300px) 1fr;
-    justify-content: center;
-    // position: fixed;
-    bottom: 0;
-    z-index: 1001;
-    background-color: #1c0950;
-    color: white;
-    height: 100px;
-}
+// .sticky {
+//     display: block;
+// }
 
-.sticky {
-    display: block;
-}
+// .post,
+// .page {
+//     margin: 0 0 1.5em;
+// }
 
-.post,
-.page {
-    margin: 0 0 1.5em;
-}
+// .updated:not(.published) {
+//     display: none;
+// }
 
-.updated:not(.published) {
-    display: none;
-}
+// .page-content,
+// .entry-content,
+// .entry-summary {
+//     margin: 1.5em 0 0;
+// }
 
-.page-content,
-.entry-content,
-.entry-summary {
-    margin: 1.5em 0 0;
-}
-
-.page-links {
-    clear: both;
-    margin: 0 0 1.5em;
-}
+// .page-links {
+//     clear: both;
+//     margin: 0 0 1.5em;
+// }

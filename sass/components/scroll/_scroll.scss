@@ -24,13 +24,14 @@ section h2 {
 
 section .text-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
 section .text-container .text-box {
     margin: 20px;
     padding: 20px;
-    background: #00c2cb;
+    background-color: rgb(198, 198, 255);
 }
 
 section .text-container .text-box h3 {

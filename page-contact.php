@@ -17,21 +17,72 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+    <div class="context">
+        <?php
+   the_title( '<h1 class="entry-title">', '</h1>' );
+        ?>
+    </div>
+
+<div class="area" >
+            <ul class="circles">
+            <?php 
+$images = get_field('skills_gallery', 10);
+if( $images ): ?>
+ 
+        <?php foreach( $images as $image ): ?>
+            <li>
+              <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+              </li>
+        <?php endforeach; ?>
+
+<?php endif; ?>
+
+<?php 
+$skills2 = ( get_field('skills_title_2', 10));
+if( $skills2): ?>
+  <?php endif; ?>
+
+<?php 
+$images = get_field('skills_gallery_2', 10);
+if( $images ): ?>
+        <?php foreach( $images as $image ): ?>
+            <li>
+              <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+            </li>
+        <?php endforeach; ?>
+
+<?php endif; ?>
+            </ul>
+        </div>
+
+
+
+
 		<?php
 		while ( have_posts() ) :
 			the_post();
+			
+			echo '<section class="contact-form">'. do_shortcode('[wpforms id="68"]') .'</section>';?>
 
-			get_template_part( 'template-parts/content', 'page' );
+		<?php endwhile; ?>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+		<section class="contact-menu">
 
-		endwhile; // End of the loop.
-		?>
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-contact',
+					'menu_id'        => 'menu-contact',
+				)
+			);
+			?>
+
+		</section>
+
+		</div>
 
 	</main><!-- #main -->
 
 <?php
 get_footer();
+
