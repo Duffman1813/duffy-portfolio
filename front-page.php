@@ -22,6 +22,8 @@ get_header();
     <h3>Front End Web Developer</h3>
 </div>
 
+<?php if (function_exists('get_field')):?>
+
 <div class="area" >
 
             <ul class="circles">
@@ -175,6 +177,8 @@ get_header();
   </div>
 
 </section>
+
+<?php endif; ?>
 
 <section class="contact-info">
   <div class="reveal">

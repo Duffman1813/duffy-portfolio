@@ -17,6 +17,8 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+<?php if (function_exists('get_field')):?>
+
     <div class="context">
         <?php
    the_title( '<h1 class="entry-title">', '</h1>' );
@@ -54,6 +56,8 @@ if( $images ): ?>
 <?php endif; ?>
             </ul>
         </div>
+
+<?php endif; ?>        
 
 
 

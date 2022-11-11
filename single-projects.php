@@ -13,7 +13,7 @@ get_header();
 	<main id="primary" class="site-main">
 
 <div class="project-wrapper">
-
+   <?php if (function_exists('get_field')):?>
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -57,6 +57,8 @@ get_header();
 		
 			  echo '</section>';
 			  ?>
+
+	<?php endif; ?>
 
 <section class="link-buttons">
 			 <?php 

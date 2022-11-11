@@ -23,6 +23,8 @@ get_header();
     ?>
 </div>
 
+<?php if (function_exists('get_field')):?>
+
 <div class="area" >
     <ul class="circles">
             <?php 
@@ -34,7 +36,7 @@ get_header();
             <li>
               <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
             </li>
-            ndforeach; ?>
+           <?php endforeach; ?>
 
             <?php endif; ?>
 
@@ -112,7 +114,7 @@ get_header();
 
 </section>
 		
-		
+<?php endif; ?>	
 
 	</main><!-- #main -->
 

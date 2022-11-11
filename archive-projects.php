@@ -12,6 +12,8 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+<?php if (function_exists('get_field')):?>
+
 <?php				
 $args = array(
     'post_type'      => 'projects',
@@ -108,6 +110,9 @@ if ( get_field( 'overview_title' ) ) {
 	echo '</section>';
 } 
 ?>
+
+<?php endif ?>
+
 	</main><!-- #primary -->
 
 <?php
