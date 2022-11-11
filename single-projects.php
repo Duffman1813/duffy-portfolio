@@ -58,7 +58,7 @@ get_header();
 			  echo '</section>';
 			  ?>
 
-	<?php endif; ?>
+
 
 <section class="link-buttons">
 			 <?php 
@@ -88,6 +88,8 @@ get_header();
 		endwhile; 
 		?>
 		</section>
+
+		<?php endif; ?>
 
 </div>
 
