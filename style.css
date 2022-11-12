@@ -1693,6 +1693,11 @@ span {
 
 .site-branding {
 	padding: 1rem;
+	text-align: center;
+}
+.site-branding img {
+	width: 200px;
+	margin: 0 auto;
 }
 
 .site-title {

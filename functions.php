@@ -99,8 +99,8 @@ function duffy_portfolio_setup() {
 	add_theme_support(
 		'custom-logo',
 		array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 150,
+			'width'       => 150,
 			'flex-width'  => true,
 			'flex-height' => true,
 		)
