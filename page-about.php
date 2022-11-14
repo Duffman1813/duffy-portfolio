@@ -71,7 +71,7 @@ get_header();
 					 }
 
 					 if ( get_field( 'about_bio' ) ) {
-						echo '<p class="about-bio">'. esc_html( get_field('about_bio') ) .'</p>';
+						echo '<p class="about-bio">'. ( get_field('about_bio') ) .'</p>';
 					 }
 
 					 echo '</section>';

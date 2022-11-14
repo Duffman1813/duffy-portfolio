@@ -44,7 +44,7 @@ get_header();
 			 }
 
 			 if ( get_field( 'languages_list' ) ) {
-				echo '<p class="languages-list">'. esc_html( get_field('languages_list') ) .'</p>';
+				echo '<p class="languages-list">'. ( get_field('languages_list') ) .'</p>';
 			 }
 
 			 if ( get_field( 'requirements_title' ) ) {
